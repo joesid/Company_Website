@@ -1,6 +1,5 @@
 import streamlit as st
-#Call Send Email Function
-
+from send_email import send_email
 
 st.header("Contact Me")
 
@@ -18,6 +17,6 @@ From: {user_email}
 """
     button = st.form_submit_button('Submit')
     if button:
-        #Read From Send Email Function
+        send_email(message)
         st.info("Your email was sent successfully")
 
